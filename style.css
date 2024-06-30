@@ -1,0 +1,95 @@
+/* Ensure the entire viewport is used */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('bg.png') no-repeat center center fixed; /* Use the bg.png as background */
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+}
+
+/* Container for the stopwatch and buttons */
+.center-screen {
+    width: 85%; /* Adjust the width as needed */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left within the container */
+    text-align: left; /* Align text to the left */
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-left: 95px; /* Adjust left margin to move it slightly to the right */
+}
+
+
+/* Styling the display area */
+#display {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Button styling */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#startStop {
+    background-color: #4CAF50;
+}
+
+#startStop:hover {
+    background-color: #45a049;
+}
+
+#lap {
+    background-color: #2196F3;
+}
+
+#lap:hover {
+    background-color: #0b7dda;
+}
+
+#reset {
+    background-color: #f44336;
+}
+
+#reset:hover {
+    background-color: #da190b;
+}
+
+/* Button click effect */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Laps container */
+#laps {
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+    overflow-y: auto;
+    max-height: 150px;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
